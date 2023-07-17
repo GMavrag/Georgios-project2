@@ -55,3 +55,5 @@ function leftCaracters(textArea, numOfChars) {
 
 leftCaracters(questionArea, "question-numb-of-char");
 leftCaracters(answerArea, "answer-numb-of-char");
+
+/* characters left */
