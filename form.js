@@ -3,6 +3,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = event.target.elements;
   const question = elements.question.value;
+  //  ' console.log(elements);'
   const answer = elements.answer.value;
   const tag = elements.tags.value;
   const section = document.createElement("section");
@@ -36,7 +37,7 @@ form.addEventListener("submit", (event) => {
 
   div.append(div2);
   section.append(img, h2, button, p, div);
-  console.log(section);
+  // console.log(section);
 
   const main = document.querySelector("main");
   main.appendChild(section);

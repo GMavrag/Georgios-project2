@@ -1,16 +1,18 @@
-const bookmarkIcon = document.querySelector('[data-js="bookmark"]');
+const bookmarkIcon = document.querySelectorAll('[data-js="bookmark"]');
 
-let bookmarked = true;
-bookmarkIcon.addEventListener("click", () => {
-  console.log("button clicked");
-  if (bookmarked) {
-    bookmarkIcon.src = "./assets/bookmark_filled.png";
-    console.log("filled");
-  } else {
-    bookmarkIcon.src = "./assets/bookmark.png";
-    console.log("gdgsd");
-  }
-  bookmarked = !bookmarked;
+Array.from(bookmarkIcon).map((i) => {
+  let bookmarked = true;
+  i.addEventListener("click", () => {
+    console.log("button clicked");
+    if (bookmarked) {
+      i.src = "./assets/bookmark_filled.png";
+      console.log("filled");
+    } else {
+      i.src = "./assets/bookmark.png";
+      console.log("gdgsd");
+    }
+    bookmarked = !bookmarked;
+  });
 });
 
 const showAnswer = document.querySelector('[data-js="show-answer"]');
